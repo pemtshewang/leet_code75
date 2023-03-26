@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, hash::Hash};
 
 // Two sum
 pub fn two_sum(mut arr: Vec<i32>, target: i32) -> Vec<usize> {
@@ -34,4 +34,18 @@ pub fn btt_buy_and_sell(arr: Vec<i32>) -> i32 {
         }
     }
     max_profit
+}
+
+pub fn contains_duplicate(arr:Vec<i32>) -> bool{
+    let mut ret_value = false;
+    let mut check = HashMap::new();
+    for item in arr {
+        if check.contains_key(&item) {
+            ret_value = true; 
+            break;
+        }else{
+            check.insert(item, 1);
+        }
+    }
+    ret_value
 }

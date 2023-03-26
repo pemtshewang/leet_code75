@@ -13,7 +13,8 @@ fn main() {
     .map(|s| s.parse().expect("Failed to parse a value"))
     .collect();
 
-    let solution = lib::btt_buy_and_sell2(input_array);
+    let solution = lib::contains_duplicate(input_array);
     println!("{solution}");
+
 
 }
